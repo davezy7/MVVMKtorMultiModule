@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_height">24dp</dimen>
+
+    <dimen name="dashboard_toolbar_menu_margin_end">8dp</dimen>
+    <dimen name="dashboard_toolbar_menu_padding">8dp</dimen>
+
+    <dimen name="default_vertical_padding">16dp</dimen>
+    <dimen name="default_horizontal_padding">16dp</dimen>
+
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp14">14dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp21">21dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp84">84dp</dimen>
+</resources>

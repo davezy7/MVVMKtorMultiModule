@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PokeCourRXKotlin.FilledCard.Style" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?colorPrimary</item>
+        <item name="strokeColor">?colorPrimary</item>
+    </style>
+</resources>
