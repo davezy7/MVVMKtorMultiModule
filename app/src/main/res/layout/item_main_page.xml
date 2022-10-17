@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/iv_item_main"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +25,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="?colorOnPrimary"
-            android:textSize="16sp"
-            android:layout_marginVertical="@dimen/dp16"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp4"
             android:layout_marginHorizontal="@dimen/dp8"
             app:layout_constraintTop_toBottomOf="@id/iv_item_main"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/tv_item_main_sale_price"
-            tools:text="Title"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Tom Clancys Ghost Recon Breakpoint Gold Edition"/>
 
         <TextView
             android:id="@+id/tv_item_main_original_price"
@@ -40,9 +40,10 @@
             android:layout_height="wrap_content"
             android:textColor="?colorOnPrimary"
             android:textSize="12sp"
-            android:layout_marginTop="@dimen/dp4"
             android:layout_marginHorizontal="@dimen/dp16"
-            app:layout_constraintTop_toBottomOf="@id/iv_item_main"
+            android:layout_marginVertical="@dimen/dp4"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_main_title"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_main_sale_price"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="$ 32.94"/>
 
