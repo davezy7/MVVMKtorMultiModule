@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.devinapp.pokecourrxkotlin.databinding.ItemMainPageBinding
 import com.devinapp.pokecourrxkotlin.models.ListDealsModel
 
@@ -32,7 +33,10 @@ class MainPageAdapter: PagingDataAdapter<ListDealsModel, MainPageAdapter.MainPag
         private val binding: ItemMainPageBinding
     ): RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ListDealsModel) {
-            binding.tvTitle.text = data.title
+            binding.tvItemMainTitle.text = data.title
+            binding.ivItemMain.load(data.thumb)
+            binding.tvItemMainOriginalPrice.text = data.normalPrice
+            binding.tvItemMainSalePrice.text = data.salePrice
         }
     }
 

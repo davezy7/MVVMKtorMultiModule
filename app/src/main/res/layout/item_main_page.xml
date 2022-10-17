@@ -22,14 +22,16 @@
 
         <TextView
             android:id="@+id/tv_item_main_title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="?colorOnPrimary"
-            android:textSize="22sp"
-            android:layout_margin="@dimen/dp16"
+            android:textSize="16sp"
+            android:layout_marginVertical="@dimen/dp16"
+            android:layout_marginHorizontal="@dimen/dp8"
             app:layout_constraintTop_toBottomOf="@id/iv_item_main"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_main_sale_price"
             tools:text="Title"/>
 
         <TextView
@@ -37,22 +39,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="?colorOnPrimary"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_marginTop="@dimen/dp4"
             android:layout_marginHorizontal="@dimen/dp16"
             app:layout_constraintTop_toBottomOf="@id/iv_item_main"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="$ 32.94"/>
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_close"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/tv_item_main_original_price"
+            app:layout_constraintEnd_toEndOf="@id/tv_item_main_original_price"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_main_original_price"
+            app:layout_constraintTop_toTopOf="@id/tv_item_main_original_price"/>
+
         <TextView
             android:id="@+id/tv_item_main_sale_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="?colorOnPrimary"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:layout_marginTop="@dimen/dp4"
+            android:layout_marginBottom="@dimen/dp8"
             android:layout_marginHorizontal="@dimen/dp16"
-            app:layout_constraintTop_toBottomOf="@id/tv_item_main_original_price"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="$ 32.94"/>
 
