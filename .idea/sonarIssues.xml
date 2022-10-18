@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -48,6 +53,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/devinapp/pokecourrxkotlin/ui/detailpage/DealsDetailFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/devinapp/pokecourrxkotlin/ui/detailpage/DealsDetailViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/devinapp/pokecourrxkotlin/ui/listpoke/ListPokemonFragment.kt">
           <value>
             <set />
@@ -68,7 +83,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/devinapp/pokecourrxkotlin/utils/extensions/FunctionExtentions.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/fragment_deals_detail.xml">
           <value>
             <set />
           </value>
@@ -109,6 +134,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <value>
             <set />
           </value>
@@ -154,6 +184,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/devinapp/pokecourrxkotlin/di/ServiceModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/devinapp/pokecourrxkotlin/models/DealsDetailResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/devinapp/pokecourrxkotlin/models/DealsGameInfoResponse.kt">
           <value>
             <set />
           </value>
@@ -213,7 +253,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/devinapp/pokecourrxkotlin/models/DealsDetailModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/devinapp/pokecourrxkotlin/models/ListDealsModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/devinapp/pokecourrxkotlin/models/NetworkResponseResult.kt">
           <value>
             <set />
           </value>
@@ -229,6 +279,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/devinapp/pokecourrxkotlin/usecase/ListDealsMainUseCaseImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Android Projects/UANGKU/app/build.gradle">
           <value>
             <set />
           </value>

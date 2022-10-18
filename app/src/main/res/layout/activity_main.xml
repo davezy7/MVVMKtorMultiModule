@@ -10,6 +10,7 @@
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?colorOnPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -20,6 +21,8 @@
             android:layout_height="?attr/actionBarSize"
             app:title="Title"
             app:titleTextColor="?colorOnBackground"
+            app:titleCentered="true"
+            app:subtitleCentered="true"
             app:navigationIcon="@drawable/ic_navigation_back"
             app:navigationIconTint="?colorOnBackground"/>
 
@@ -33,8 +36,10 @@
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/main_navigation_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

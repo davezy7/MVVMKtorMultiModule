@@ -1,4 +1,4 @@
-package com.devinapp.pokecourrxkotlin.network
+package com.devinapp.pokecourrxkotlin.models
 
 sealed class NetworkResponse<out R> {
     data class Success<out T>(val data: T): NetworkResponse<T>()

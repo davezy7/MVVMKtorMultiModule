@@ -5,6 +5,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.devinapp.pokecourrxkotlin.databinding.FragmentMainPageBinding
 import com.devinapp.pokecourrxkotlin.ui.base.BaseFragment
 import com.devinapp.pokecourrxkotlin.ui.base.CommonLoadStateAdapter
@@ -24,6 +25,7 @@ class MainPageFragment : BaseFragment<FragmentMainPageBinding>() {
     override fun onFragmentCreated() {
         setupCollector()
         setupRecyclerView()
+        setupAdapter()
     }
 
     private fun setupCollector() {
@@ -40,5 +42,13 @@ class MainPageFragment : BaseFragment<FragmentMainPageBinding>() {
         binding.rvMainPage.adapter = mainPageAdapter.withLoadStateFooter(
             footer = CommonLoadStateAdapter { mainPageAdapter.retry() }
         )
+    }
+
+    private fun setupAdapter() {
+        mainPageAdapter.setOnItemClickListener { data ->
+            val action = MainPageFragmentDirections
+                .actionMainPageFragmentToDealsDetailFragment(data.dealID)
+            findNavController().navigate(action)
+        }
     }
 }

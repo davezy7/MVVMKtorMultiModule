@@ -9,10 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.devinapp.pokecourrxkotlin.databinding.ItemMainPageBinding
 import com.devinapp.pokecourrxkotlin.models.ListDealsModel
+import com.devinapp.pokecourrxkotlin.utils.extensions.toUSD
 
 class MainPageAdapter: PagingDataAdapter<ListDealsModel, MainPageAdapter.MainPageAdapterViewHolder>(COMPARATOR) {
 
-    private var onItemClickListener: ((view: View, data: ListDealsModel) -> Unit)? = null
+    private var onItemClickListener: ((data: ListDealsModel) -> Unit)? = null
 
     override fun onBindViewHolder(holder: MainPageAdapterViewHolder, position: Int) {
         val item = getItem(position)
@@ -29,14 +30,23 @@ class MainPageAdapter: PagingDataAdapter<ListDealsModel, MainPageAdapter.MainPag
         )
     }
 
+    fun setOnItemClickListener(listener: (data: ListDealsModel) -> Unit) {
+        this.onItemClickListener = listener
+    }
+
     inner class MainPageAdapterViewHolder(
         private val binding: ItemMainPageBinding
     ): RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ListDealsModel) {
-            binding.tvItemMainTitle.text = data.title
-            binding.ivItemMain.load(data.thumb)
-            binding.tvItemMainOriginalPrice.text = data.normalPrice
-            binding.tvItemMainSalePrice.text = data.salePrice
+            binding.apply {
+                tvItemMainTitle.text = data.title
+                ivItemMain.load(data.thumb)
+                tvItemMainOriginalPrice.text = data.normalPrice.toUSD()
+                tvItemMainSalePrice.text = data.salePrice.toUSD()
+                mcvMainPageItem.setOnClickListener {
+                    onItemClickListener?.invoke(data)
+                }
+            }
         }
     }
 

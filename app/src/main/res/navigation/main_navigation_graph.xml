@@ -8,6 +8,22 @@
     <fragment
         android:id="@+id/mainPageFragment"
         android:name="com.devinapp.pokecourrxkotlin.ui.mainpage.MainPageFragment"
-        android:label="fragment_main_page"
-        tools:layout="@layout/fragment_main_page" />
+        android:label="@string/main_page_topbar_title"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_dealsDetailFragment"
+            app:destination="@id/dealsDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/dealsDetailFragment"
+        android:name="com.devinapp.pokecourrxkotlin.ui.detailpage.DealsDetailFragment"
+        android:label="@string/main_page_topbar_title"
+        tools:layout="@layout/fragment_deals_detail" >
+        <argument
+            android:name="dealsId"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

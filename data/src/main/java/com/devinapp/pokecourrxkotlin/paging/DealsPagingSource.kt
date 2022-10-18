@@ -3,10 +3,8 @@ package com.devinapp.pokecourrxkotlin.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.devinapp.pokecourrxkotlin.models.ListDealsModel
-import com.devinapp.pokecourrxkotlin.models.ListDealsResponse
-import com.devinapp.pokecourrxkotlin.network.pagingSucceeded
+import com.devinapp.pokecourrxkotlin.models.pagingSucceeded
 import com.devinapp.pokecourrxkotlin.services.GameDealsServices
-import java.io.IOException
 import javax.inject.Inject
 
 class DealsPagingSource @Inject constructor(

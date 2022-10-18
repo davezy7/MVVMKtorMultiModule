@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcv_main_page_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dp8"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_margin="@dimen/dp8">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,60 +16,80 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:src="@drawable/ic_launcher_background"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/tv_item_main_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="?colorOnPrimary"
-            android:textSize="14sp"
+            android:layout_marginHorizontal="@dimen/dp8"
             android:layout_marginTop="@dimen/dp8"
             android:layout_marginBottom="@dimen/dp4"
-            android:layout_marginHorizontal="@dimen/dp8"
-            app:layout_constraintTop_toBottomOf="@id/iv_item_main"
+            android:textColor="?colorOnPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Tom Clancys Ghost Recon Breakpoint Gold Edition"/>
+            app:layout_constraintTop_toBottomOf="@id/iv_item_main"
+            tools:text="Tom Clancys Ghost Recon Breakpoint Gold Edition" />
 
-        <TextView
-            android:id="@+id/tv_item_main_original_price"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="?colorOnPrimary"
-            android:textSize="12sp"
-            android:layout_marginHorizontal="@dimen/dp16"
-            android:layout_marginVertical="@dimen/dp4"
+            android:layout_margin="@dimen/dp8"
+            app:cardBackgroundColor="?colorPrimaryContainer"
             app:layout_constraintTop_toBottomOf="@id/tv_item_main_title"
-            app:layout_constraintBottom_toTopOf="@id/tv_item_main_sale_price"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="$ 32.94"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_close"
-            android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="@id/tv_item_main_original_price"
-            app:layout_constraintEnd_toEndOf="@id/tv_item_main_original_price"
-            app:layout_constraintBottom_toBottomOf="@id/tv_item_main_original_price"
-            app:layout_constraintTop_toTopOf="@id/tv_item_main_original_price"/>
-
-        <TextView
-            android:id="@+id/tv_item_main_sale_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="?colorOnPrimary"
-            android:textSize="16sp"
-            android:layout_marginTop="@dimen/dp4"
-            android:layout_marginBottom="@dimen/dp8"
-            android:layout_marginHorizontal="@dimen/dp16"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="$ 32.94"/>
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_item_main_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp4"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:textColor="?colorOnPrimaryContainer"
+                    android:textSize="12sp"
+                    android:alpha="0.7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_item_main_sale_price"
+                    tools:text="$ 32.94" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_item_main_original_price"
+                    app:layout_constraintEnd_toEndOf="@id/tv_item_main_original_price"
+                    app:layout_constraintStart_toStartOf="@id/tv_item_main_original_price"
+                    app:layout_constraintTop_toTopOf="@id/tv_item_main_original_price"
+                    app:tint="?colorOnPrimaryContainer" />
+
+                <TextView
+                    android:id="@+id/tv_item_main_sale_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:textColor="?colorOnPrimaryContainer"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="$ 32.94" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
